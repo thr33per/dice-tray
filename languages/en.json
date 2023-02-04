@@ -1,0 +1,12 @@
+{
+  "DICETRAY": {
+    "Title": "Dice Tray",
+    "settings": {
+      "INJECT_BUTTON": {
+        "Name": "Show the Dice Tray",
+        "Hint": "Restart the game for the setting to take effect."
+      }
+    },
+    "Action": "Roll Dice"
+  }
+}

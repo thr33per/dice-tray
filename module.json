@@ -1,0 +1,27 @@
+{
+  "id": "dice-tray",
+  "title": "Dice Tray",
+  "description": "A dice tray that allows you to easily pick and roll any combination of dice.",
+  "esmodules": [],
+  "scripts": ["scripts/dice-tray.js"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "styles": ["styles/dice-tray.css"],
+  "system": [],
+  "authors": [
+    {
+      "name": "Chris Booth",
+      "email": "sirhcbooth@gmail.com",
+      "url": "https://github.com/thr33per"
+    }
+  ],
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.8.8",
+  "url": "https://github.com/thr33per/dice-tray",
+  "download": "https://github.com/thr33per/dice-tray/archive/refs/heads/main.zip"
+}

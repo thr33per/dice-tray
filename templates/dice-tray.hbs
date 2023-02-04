@@ -1,0 +1,75 @@
+<form class="main-tray">
+  <ul class="fa-ul">
+    {{#each dice}}
+      <li>
+        <div class="roll-container">
+          <div class="dice-div" data-sides="{{sides}}"><i
+              class="{{class}}"
+            ></i><span class="dice-label">d{{sides}}</span></div>
+          <input
+            id="d{{sides}}-1"
+            class="dice-input"
+            name="d{{sides}}"
+            type="radio"
+            value="1"
+          />
+          <label for="d{{sides}}-1">
+            <div class="dice-count-div">1</div>
+          </label>
+          <input
+            id="d{{sides}}-2"
+            type="radio"
+            class="dice-input"
+            name="d{{sides}}"
+            value="2"
+          />
+          <label for="d{{sides}}-2">
+            <div class="dice-count-div">2</div>
+          </label>
+          <input
+            id="d{{sides}}-3"
+            type="radio"
+            class="dice-input"
+            name="d{{sides}}"
+            value="3"
+          />
+          <label for="d{{sides}}-3">
+            <div class="dice-count-div">3</div>
+          </label>
+          <input
+            id="d{{sides}}-4"
+            type="radio"
+            class="dice-input"
+            name="d{{sides}}"
+            value="4"
+          />
+          <label for="d{{sides}}-4">
+            <div class="dice-count-div">4</div>
+          </label>
+          <input
+            id="d{{sides}}-5"
+            type="radio"
+            class="dice-input"
+            name="d{{sides}}"
+            value="5"
+          />
+          <label for="d{{sides}}-5">
+            <div class="dice-count-div">5</div>
+          </label>
+          <input
+            id="d{{sides}}-6"
+            type="radio"
+            class="dice-input"
+            name="d{{sides}}"
+            value="6"
+          />
+          <label for="d{{sides}}-6">
+            <div class="dice-count-div">6</div>
+          </label>
+
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+  <button>{{localize "DICETRAY.Action"}}</button>
+</form>

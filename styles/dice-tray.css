@@ -1,0 +1,53 @@
+.main-tray {
+  width: 40rem;
+}
+
+.main-tray ul li {
+  margin-bottom: 0.5rem;
+}
+
+.dice-div {
+  display: grid;
+  place-content: center;
+  font-size: 3rem;
+}
+
+.dice-label {
+  font-size: 0.8rem;
+  color: #000000;
+  background-color: #c0c0c0;
+  border: 0.1rem solid #000000;
+  text-align: center;
+  position: relative;
+  top: -1.5rem;
+}
+
+.dice-input {
+  display: none;
+}
+
+.dice-input:checked + label > .dice-count-div {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.custom-input {
+  height: 3rem;
+  border: none;
+}
+
+.dice-count-div {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  color: #000000;
+  place-content: center;
+  font-size: 3rem;
+  border-radius: 1rem;
+  border: 0.1rem solid #000000;
+}
+
+.roll-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
