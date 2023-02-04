@@ -21,7 +21,10 @@
     }
   ],
   "version": "1.0.0",
-  "minimumCoreVersion": "0.8.8",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
   "url": "https://github.com/thr33per/dice-tray",
   "download": "https://github.com/thr33per/dice-tray/archive/refs/heads/main.zip"
 }
