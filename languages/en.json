@@ -4,7 +4,7 @@
     "settings": {
       "INJECT_BUTTON": {
         "Name": "Show the Dice Tray",
-        "Hint": "Restart the game for the setting to take effect."
+        "Hint": "This will reload the UI and remove or add the button to the controls area."
       }
     },
     "Action": "Roll Dice"
