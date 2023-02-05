@@ -7,6 +7,11 @@
         "Hint": "This will reload the UI and remove or add the button to the controls area."
       }
     },
-    "Action": "Roll Dice"
+    "Action": "Roll Dice",
+    "RollModes": {
+      "GM": "GM Roll",
+      "Private": "Private Roll",
+      "Public": "Public Roll"
+    }
   }
 }
