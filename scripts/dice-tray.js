@@ -64,9 +64,19 @@ class DiceTrayConfig extends FormApplication {
     formData.d8 ? rolls.push(`${formData.d8}d8`) : undefined;
     formData.d6 ? rolls.push(`${formData.d6}d6`) : undefined;
     formData.d4 ? rolls.push(`${formData.d4}d4`) : undefined;
+    if (rolls.length === 0) {
+      rolls.push("1d20");
+    }
     let roll = new Roll(`{${rolls.join(", ")}}`);
+    roll._formula = rolls.join(", ");
     await roll.evaluate({ async: true });
-    await roll.toMessage();
+    await roll.toMessage(
+      {
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: "Dice Tray Roll",
+      },
+      { rollMode: formData.rollMode }
+    );
     this.render();
   }
 }
@@ -99,7 +109,6 @@ Hooks.on("getSceneControlButtons", (controls) => {
     DiceTray.log(false, "DiceTray is disabled");
     return;
   }
-  DiceTray.log(false, "DiceTray is enabled");
   controls
     .find((c) => c.name === "token")
     .tools.push({
@@ -112,3 +121,12 @@ Hooks.on("getSceneControlButtons", (controls) => {
       },
     });
 });
+
+function clearDice(dice) {
+  [1, 2, 3, 4, 5, 6].map((num) => {
+    const diceItem = document.getElementById(`d${dice}-${num}`);
+    if (diceItem.checked) {
+      diceItem.checked = false;
+    }
+  });
+}

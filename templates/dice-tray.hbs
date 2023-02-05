@@ -3,9 +3,14 @@
     {{#each dice}}
       <li>
         <div class="roll-container">
-          <div class="dice-div" data-sides="{{sides}}"><i
-              class="{{class}}"
-            ></i><span class="dice-label">d{{sides}}</span></div>
+          <div
+            class="dice-div"
+            data-sides="{{sides}}"
+            onclick="clearDice(`{{sides}}`)"
+          >
+            <i class="{{class}}"></i>
+            <span class="dice-label">d{{sides}}</span>
+          </div>
           <input
             id="d{{sides}}-1"
             class="dice-input"
@@ -71,5 +76,35 @@
       </li>
     {{/each}}
   </ul>
+
+<div class="roll-type-list">
+  <div><input
+        class="roll-type-input"
+        type="radio"
+        id="public"
+        name="rollMode"
+        value="roll"
+        checked
+      /></li>
+    <label for="public" class="roll-type-label">Public Roll</label></div>
+  <div><input
+        class="roll-type-input"
+        type="radio"
+        id="private"
+        name="rollMode"
+        value="selfroll"
+      /></li>
+    <label for="private" class="roll-type-label">Private Roll</label></div>
+  <div>
+    <input
+        class="roll-type-input"
+        type="radio"
+        id="gm"
+        name="rollMode"
+        value="gmroll"
+      /></li>
+    <label for="gm" class="roll-type-label">GM Roll</label>
+  </div>
+</div>
   <button>{{localize "DICETRAY.Action"}}</button>
 </form>
